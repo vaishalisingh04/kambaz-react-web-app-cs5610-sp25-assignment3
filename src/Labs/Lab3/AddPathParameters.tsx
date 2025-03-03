@@ -2,14 +2,11 @@ import { useParams } from "react-router-dom";
 
 export default function AddPathParameters() {
   let { a, b } = useParams();
-  const sum = parseInt(a) + parseInt(b);
+  
+  // Check if a and b are defined before parsing them
+  const sum = parseInt(a || '0') + parseInt(b || '0');
 
   return (
-    <div>
-      <h2>Add Path Parameters</h2>
-      <p>
-        {a} + {b} = {sum}
-      </p>
-    </div>
+    <div>{sum}</div>
   );
 }
