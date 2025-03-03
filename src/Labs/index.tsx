@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router";
+import { HashRouter } from 'react-router-dom';
 import Lab1 from "./Lab1";
 import TOC from "./TOC";
 import Lab3 from "./Lab3";
