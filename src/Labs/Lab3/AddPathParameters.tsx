@@ -1,12 +1,18 @@
 import { useParams } from "react-router-dom";
 
 export default function AddPathParameters() {
-  let { a, b } = useParams();
-  
-  // Check if a and b are defined before parsing them
-  const sum = parseInt(a || '0') + parseInt(b || '0');
+  // Extract parameters a and b
+  const { a, b } = useParams();
+
+  // Parse parameters safely as integers
+  const sum = parseInt(a || "0", 10) + parseInt(b || "0", 10);
 
   return (
-    <div>{sum}</div>
+    <div id="wd-add">
+      <h4>Add Path Parameters</h4>
+      
+      {/* Display the calculation */}
+      {a} + {b} = {sum}
+    </div>
   );
 }
