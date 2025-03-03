@@ -4,7 +4,6 @@ import Lab1 from "./Lab1";
 import TOC from "./TOC";
 import Lab3 from "./Lab3";
 import Lab2 from "./Lab2";
-import PathParameters from "./PathParameters";
 
 export default function Labs() {
   return (
