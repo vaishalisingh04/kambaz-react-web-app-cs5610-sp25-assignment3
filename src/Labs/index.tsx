@@ -26,9 +26,6 @@ export default function Labs() {
             <li>
               <Link to="/Lab3">Lab 3</Link>
             </li>
-            <li>
-              <Link to="/PathParameters">Path Parameters</Link>
-            </li>
           </ul>
         </nav>
 
@@ -40,8 +37,6 @@ export default function Labs() {
           <Route path="Lab1" element={<Lab1 />} />
           <Route path="Lab2" element={<Lab2 />} />
           <Route path="Lab3" element={<Lab3 />} />
-          {/* Path Parameters Feature */}
-          <Route path="PathParameters/*" element={<PathParameters />} />
         </Routes>
       </div>
     </HashRouter>
