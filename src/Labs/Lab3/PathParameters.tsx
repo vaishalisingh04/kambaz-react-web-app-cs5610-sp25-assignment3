@@ -1,33 +1,15 @@
-import { Routes, Route, Link, useParams } from "react-router-dom";
-
-function AddNumbers() {
-  // Extract path parameters
-  let { a, b } = useParams();
-
-  // Calculate sum
-  const sum = Number(a) + Number(b);
-
-  return (
-    <div>
-      <h2>Add Path Parameters</h2>
-      <p>{a} + {b} = {sum}</p>
-    </div>
-  );
-}
-
+import { Routes, Route, Link } from "react-router-dom";
+import AddPathParameters from "./AddPathParameters";
 export default function PathParameters() {
   return (
-    <div>
-      <h1>Path Parameters</h1>
-      {/* Links with dynamic parameters */}
-      <Link to="/add/1/2">1 + 2</Link>
-      <br />
-      <Link to="/add/3/4">3 + 4</Link>
-
-      {/* Define routes */}
-      <Routes>
-        <Route path="/add/:a/:b" element={<AddNumbers />} />
-      </Routes>
-    </div>
+   <div id="wd-path-parameters">
+    <h2>Path Parameters</h2>
+    <Link to="/Labs/Lab3/add/1/2">1 + 2</Link> <br />
+    <Link to="/Labs/Lab3/add/3/4">3 + 4</Link>
+    <Routes>
+      <Route path="add/:a/:b" element={<AddPathParameters />} />
+    </Routes>
+   </div>
   );
 }
+
